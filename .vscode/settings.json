@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "altgraph",
+        "appnope",
+        "asttokens",
+        "dacite",
+        "ipykernel",
+        "mypy",
+        "pathspec",
+        "platformdirs",
+        "pycparser",
+        "pyinstaller",
+        "pylint",
+        "pytokens",
+        "sdist"
+    ]
+}

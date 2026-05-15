@@ -1,0 +1,75 @@
+[project]
+name = "raspberry-pi5-usb-keyboard-storage-configuration"
+version = "0.1.0"
+description = "Configuration and scripts to make the Raspberry Pi 5 shows as a composite USB client device (HID/keyboard and storage)"
+readme = "README.md"
+authors = [
+    {
+        name = "Ronald Rink",
+        email = "dfch@users.noreply.github.com"
+    }
+]
+maintainers = [
+    { name = "d-fens GmbH" },
+]
+requires-python = ">=3.13"
+
+keywords = [
+    "usb",
+    "hid",
+    "raspberry",
+    "pi",
+    "pi5",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "dacite>=1.9.2",
+    "rich>=15.0.0",
+    "typer>=0.25.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "coverage",
+    "parameterized>=0.9.0",
+    "pylint>=4.0.0",
+]
+
+dev = [
+    "raspberry-pi5-usb-keyboard-storage-configuration[test]",
+    "black",
+    "flake8>=7.3.0",
+    "pip>=26.1.1",
+]
+
+interactive = [
+    "ipykernel",
+]
+
+build = [
+    "pyinstaller>=6.16.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dfensgmbh/biz.dfch.raspberry-pi5-usb-keyboard-storage-configuration"
+Issues = "https://github.com/dfensgmbh/biz.dfch.raspberry-pi5-usb-keyboard-storage-configuration/issues"
+
+[tool.black]
+line-length = 80
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[[tool.mypy.overrides]]
+module = ["parameterized.*"]
+ignore_missing_imports = true
