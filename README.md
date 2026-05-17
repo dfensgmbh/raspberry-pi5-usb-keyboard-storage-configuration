@@ -35,28 +35,29 @@ The disk image is `/piusb.bin`.
     ```
     /boot/firmware/config.txt
     ```
-4. Change the file `cmdline.txt` in:
+3. Change the file `cmdline.txt` in:
     ```
     /boot/firmware/cmdline.txt
     ```
-
-6. Create the `usb-gadget.sh` script in:
+4. Create the `usb-gadget.sh` script in:
     ```
     /usr/local/bin/usb-gadget.sh
     ```
-
-8. Create the `usbgadget.service` service in:
+5. Create the `usbgadget.service` service in:
     ```
     /lib/systemd/system/usbgadget.service
     ```
 
-10. Enable the `usbgadget.service` service.
+6. Enable the `usbgadget.service` service.
     ```
     sudo chmod +x /usr/local/sbin/usb-gadget.sh
     sudo systemctl enable usbgadget.service
     ```
 
-11. Restart.
+7. Restart.
+    ```
+    sudo reboot
+    ```
 
 ## Examine changes on the disk
 
