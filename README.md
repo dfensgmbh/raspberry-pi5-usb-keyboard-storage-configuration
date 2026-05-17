@@ -14,6 +14,8 @@ There are connect and disconnect scripts in the `scripts` folder:
 
 You must use a USB-C cable from and connect the Raspberry Pi 5 to the USB host computer.
 
+NOTE: When you use `modprobe` to disconnect and connect the disk, the keyboard device disappears. This mean, you either only mount the disk "read-only" on the Pi or do not use the keyboard after you disconnect.
+
 ## Installation
 
 Go to the `root` folder in this repository and follow the instructions. All scripts and files are "hard coded". If you change the path and file names you have to change these in all the scripts.
@@ -38,6 +40,7 @@ The disk image is `/piusb.bin`.
     ```
     sudo nano /boot/firmware/config.txt
     ```
+    NOTE: When you use a "Raspberry Compute Module 5" you can also use the `[pi5]` section.
 3. Change the file [`cmdline.txt`](./root/boot/firmware/cmdline.txt) in:
     ```
     /boot/firmware/cmdline.txt
@@ -45,7 +48,7 @@ The disk image is `/piusb.bin`.
     ```
     sudo nano /boot/firmware/cmdline.txt
     ```
-4. Create the [`usb-gadget.sh`](./root/usr/local/sbin/usb-gadget.sh) script in:
+4. Create the [`usb-gadget.sh`](./root/usr/local/bin/usb-gadget.sh) script in:
     ```
     /usr/local/bin/usb-gadget.sh
     ```
@@ -61,7 +64,7 @@ The disk image is `/piusb.bin`.
     ```
 6. Enable the `usb-gadget.service` service.
     ```
-    sudo chmod +x /usr/local/sbin/usb-gadget.sh
+    sudo chmod +x /usr/local/bin/usb-gadget.sh
     sudo systemctl enable usb-gadget.service
     ```
 7. Restart.

@@ -5,7 +5,7 @@ After=systemd-modules-load.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/local/sbin/usb-gadget.sh
+ExecStart=/usr/local/bin/usb-gadget.sh
 
 [Install]
 WantedBy=sysinit.target

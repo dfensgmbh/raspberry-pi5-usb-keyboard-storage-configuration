@@ -1,1 +1,1 @@
-sudo chmod +x /usr/local/sbin/usb-gadget.sh
+sudo chmod +x /usr/local/bin/usb-gadget.sh

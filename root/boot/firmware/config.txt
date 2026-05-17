@@ -1,5 +1,6 @@
-[cm5]
+[pi5]
 # Change DWC2 to peripheral (device/gadget) mode.
+# "pi5" is also valid for "Compute Module 5".
 dtoverlay=dwc2,dr_mode=peripheral
 
 [all]
