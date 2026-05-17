@@ -53,6 +53,9 @@ The disk image is `/piusb.bin`.
     ```
     sudo nano /boot/firmware/cmdline.txt
     ```
+    ```
+    modules-load=dwc2,libcomposite
+    ```
 4. Create the `usb-gadget.sh` script in:
     ```
     /usr/local/bin/usb-gadget.sh
