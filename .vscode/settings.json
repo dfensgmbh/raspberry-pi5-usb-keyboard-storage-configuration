@@ -5,6 +5,7 @@
         "appnope",
         "asttokens",
         "cdrom",
+        "cmdline",
         "dacite",
         "hidg",
         "ipykernel",
