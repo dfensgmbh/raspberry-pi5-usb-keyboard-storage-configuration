@@ -26,12 +26,15 @@ The disk image is `/piusb.bin`.
 
 ### Summary
 
-1. Create a file that contains the contents of the mass storage device.
+1. Create a file that contains the contents of the mass storage device:
+    ```
+    sudo dd if=/dev/zero of=/piusb.bin bs=1M count=64
+    sudo mkdosfs /piusb.bin
+    ```
 2. Change the file `config.txt` in:
     ```
     /boot/firmware/config.txt
     ```
-
 4. Change the file `cmdline.txt` in:
     ```
     /boot/firmware/cmdline.txt
@@ -64,19 +67,16 @@ When you want to see if the host computer changed the contents of the disk you c
 When you want to send text to the USB host computer, do these steps:
 
 1. Change to the root directory of the repository, and prepare the Python environment:
-
     ```
     uv sync --extra dev --extra build --python 3.13
     ```
 
 2. Activate the python environment:
-
     ```
     source .venv/bin/activate
     ```
 
 3. Start the program:
-
     ```
     sudo .venv/bin/python -m src arbitrary_text_to_send_with_keyboard
     ```
