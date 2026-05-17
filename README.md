@@ -35,9 +35,23 @@ The disk image is `/piusb.bin`.
     ```
     /boot/firmware/config.txt
     ```
+    ```
+    sudo nano /boot/firmware/config.txt
+    ```
+    ```
+    [cm5]
+    # Change DWC2 to peripheral (device/gadget) mode.
+    dtoverlay=dwc2,dr_mode=peripheral
+
+    [all]
+    usb_max_current_enable=1
+    ```
 3. Change the file `cmdline.txt` in:
     ```
     /boot/firmware/cmdline.txt
+    ```
+    ```
+    sudo nano /boot/firmware/cmdline.txt
     ```
 4. Create the `usb-gadget.sh` script in:
     ```
