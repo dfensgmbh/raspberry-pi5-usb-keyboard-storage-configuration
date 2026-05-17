@@ -27,6 +27,7 @@
         "setuptools",
         "typer",
         "udevadm",
-        "usbgadget"
+        "usbgadget",
+        "venv"
     ]
 }
