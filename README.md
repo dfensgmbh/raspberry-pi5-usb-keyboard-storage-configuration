@@ -59,16 +59,20 @@ The disk image is `/piusb.bin`.
     ```
     sudo nano /lib/systemd/system/usb-gadget.service
     ```
-
 6. Enable the `usb-gadget.service` service.
     ```
     sudo chmod +x /usr/local/sbin/usb-gadget.sh
     sudo systemctl enable usb-gadget.service
     ```
-
 7. Restart.
     ```
     sudo reboot
+    ```
+8. Examine configuration.
+    ```
+    ls /dev/hidg*        # Must show /dev/hidg0.
+    ls /sys/class/udc/   # Must show the UDC controller.
+    dmesg | grep dwc2    # Examine for any errors.
     ```
 
 ## Examine changes on the disk
