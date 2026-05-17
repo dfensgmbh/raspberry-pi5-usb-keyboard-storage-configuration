@@ -27,12 +27,28 @@ The disk image is `/piusb.bin`.
 ### Summary
 
 1. Create a file that contains the contents of the mass storage device.
-2. Change the file in:
+2. Change the file `config.txt` in:
+
     ```/boot/firmware/config.txt```
-4. Change the file `cmdline.txt`.
-5. Create the `usb-gadget.sh` script.
-6. Create the `usbgadget.service` service.
-7. Enable the `usbgadget.service` service.
+
+3. Change the file `cmdline.txt` in:
+
+    ```/boot/firmware/cmdline.txt```
+
+4. Create the `usb-gadget.sh` script in:
+
+    ```/usr/local/bin/usb-gadget.sh```
+
+5. Create the `usbgadget.service` service in:
+
+    ```/lib/systemd/system/usbgadget.service```
+
+6. Enable the `usbgadget.service` service.
+    ```
+    sudo chmod +x /usr/local/sbin/usb-gadget.sh
+    sudo systemctl enable usbgadget.service
+    ```
+
 8. Restart.
 
 ## Examine changes on the disk
