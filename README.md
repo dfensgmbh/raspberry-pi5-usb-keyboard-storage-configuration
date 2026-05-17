@@ -59,3 +59,9 @@ When you want to send text to the USB host computer, do these steps:
     ```
     sudo .venv/bin/python -m src arbitrary_text_to_send_with_keyboard
     ```
+
+## Mass Storage Device on Windows 11
+
+<img width="528" height="122" alt="image" src="https://github.com/user-attachments/assets/37c3a771-e55c-4749-9be5-22509b8ccd4e" />
+
+<img width="463" height="151" alt="image" src="https://github.com/user-attachments/assets/da799e98-a593-4941-8af7-f35b5203e5f4" />
