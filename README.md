@@ -26,13 +26,50 @@ The disk image is `/piusb.bin`.
 
 ### Summary
 
-1. Create a file that contains the contents of the mass storage device.
-2. Change the file `config.txt`.
-3. Change the file `cmdline.txt`.
-4. Create the `usb-gadget.sh` script.
-5. Create the `usbgadget.service` service.
+1. Create a file that contains the contents of the mass storage device:
+    ```
+    sudo dd if=/dev/zero of=/piusb.bin bs=1M count=64
+    sudo mkdosfs /piusb.bin
+    ```
+2. Change the file [`config.txt`](./root/boot/firmware/config.txt) in:
+    ```
+    /boot/firmware/config.txt
+    ```
+    ```
+    sudo nano /boot/firmware/config.txt
+    ```
+3. Change the file [`cmdline.txt`](./root/boot/firmware/cmdline.txt) in:
+    ```
+    /boot/firmware/cmdline.txt
+    ```
+    ```
+    sudo nano /boot/firmware/cmdline.txt
+    ```
+4. Create the [`usb-gadget.sh`](./root/usr/local/sbin/usb-gadget.sh) script in:
+    ```
+    /usr/local/bin/usb-gadget.sh
+    ```
+    ```
+    sudo nano /usr/local/bin/usb-gadget.sh
+    ```
+5. Create the [`usbgadget.service`](./root/lib/systemd/system/usbgadget.service) service in:
+    ```
+    /lib/systemd/system/usbgadget.service
+    ```
+    ```
+    sudo nano /lib/systemd/system/usbgadget.service
+    ```
+
 6. Enable the `usbgadget.service` service.
+    ```
+    sudo chmod +x /usr/local/sbin/usb-gadget.sh
+    sudo systemctl enable usbgadget.service
+    ```
+
 7. Restart.
+    ```
+    sudo reboot
+    ```
 
 ## Examine changes on the disk
 
@@ -43,19 +80,16 @@ When you want to see if the host computer changed the contents of the disk you c
 When you want to send text to the USB host computer, do these steps:
 
 1. Change to the root directory of the repository, and prepare the Python environment:
-
     ```
     uv sync --extra dev --extra build --python 3.13
     ```
 
 2. Activate the python environment:
-
     ```
     source .venv/bin/activate
     ```
 
 3. Start the program:
-
     ```
     sudo .venv/bin/python -m src arbitrary_text_to_send_with_keyboard
     ```
