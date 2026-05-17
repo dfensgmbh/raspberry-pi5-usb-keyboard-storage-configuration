@@ -31,38 +31,33 @@ The disk image is `/piusb.bin`.
     sudo dd if=/dev/zero of=/piusb.bin bs=1M count=64
     sudo mkdosfs /piusb.bin
     ```
-2. Change the file `config.txt` in:
+2. Change the file [`config.txt`](./root/boot/firmware/config.txt) in:
     ```
     /boot/firmware/config.txt
     ```
     ```
     sudo nano /boot/firmware/config.txt
     ```
-    ```
-    [cm5]
-    # Change DWC2 to peripheral (device/gadget) mode.
-    dtoverlay=dwc2,dr_mode=peripheral
-
-    [all]
-    usb_max_current_enable=1
-    ```
-3. Change the file `cmdline.txt` in:
+3. Change the file [`cmdline.txt`](./root/boot/firmware/cmdline.txt) in:
     ```
     /boot/firmware/cmdline.txt
     ```
     ```
     sudo nano /boot/firmware/cmdline.txt
     ```
-    ```
-    modules-load=dwc2,libcomposite
-    ```
 4. Create the [`usb-gadget.sh`](./root/usr/local/sbin/usb-gadget.sh) script in:
     ```
     /usr/local/bin/usb-gadget.sh
     ```
+    ```
+    sudo nano /usr/local/bin/usb-gadget.sh
+    ```
 5. Create the [`usbgadget.service`](./root/lib/systemd/system/usbgadget.service) service in:
     ```
     /lib/systemd/system/usbgadget.service
+    ```
+    ```
+    sudo nano /lib/systemd/system/usbgadget.service
     ```
 
 6. Enable the `usbgadget.service` service.
