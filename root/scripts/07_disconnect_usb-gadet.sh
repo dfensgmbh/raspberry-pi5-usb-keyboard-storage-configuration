@@ -1,1 +1,1 @@
-echo "" | sudo tee /sys/kernel/config/usb_gadget/g1/UDC
+sudo modprobe -r g_mass_storage
