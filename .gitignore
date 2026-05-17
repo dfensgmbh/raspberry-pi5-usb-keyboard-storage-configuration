@@ -221,4 +221,4 @@ __marimo__/
 !root/lib/  
 !root/lib/systemd/  
 !root/lib/systemd/system/  
-!root/lib/systemd/system/usbgadget.service
+!root/lib/systemd/system/usb-gadget.service

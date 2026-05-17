@@ -58,7 +58,7 @@
         "streamlit",
         "typer",
         "udevadm",
-        "usbgadget",
+        "usb-gadget",
         "venv",
         "webassets"
     ]

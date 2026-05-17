@@ -52,18 +52,18 @@ The disk image is `/piusb.bin`.
     ```
     sudo nano /usr/local/bin/usb-gadget.sh
     ```
-5. Create the [`usbgadget.service`](./root/lib/systemd/system/usbgadget.service) service in:
+5. Create the [`usb-gadget.service`](./root/lib/systemd/system/usb-gadget.service) service in:
     ```
-    /lib/systemd/system/usbgadget.service
+    /lib/systemd/system/usb-gadget.service
     ```
     ```
-    sudo nano /lib/systemd/system/usbgadget.service
+    sudo nano /lib/systemd/system/usb-gadget.service
     ```
 
-6. Enable the `usbgadget.service` service.
+6. Enable the `usb-gadget.service` service.
     ```
     sudo chmod +x /usr/local/sbin/usb-gadget.sh
-    sudo systemctl enable usbgadget.service
+    sudo systemctl enable usb-gadget.service
     ```
 
 7. Restart.
