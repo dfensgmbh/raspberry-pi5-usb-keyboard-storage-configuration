@@ -1,3 +1,0 @@
-First, create all files that you find below the `root` directory structure, but do not create the files in the `scripts` directory.
-
-When you create "shell script" files, make sure that you can start them. Use `chmod +x` for this.
