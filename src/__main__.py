@@ -132,7 +132,8 @@ CHAR_MAP_US = {
 MODIFIER_NONE = 0x00
 MODIFIER_SHIFT = 0x02
 HID_DEVICE = '/dev/hidg0'
-KEY_DELAY = 0.025  # seconds between keystrokes
+# Delay between individual keystrokes.
+KEY_DELAY = 0.020
 
 
 def _write_report(modifier: int, keycode: int) -> None:
