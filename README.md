@@ -32,7 +32,7 @@ The disk image is `/piusb.bin`.
 4. Create the `usb-gadget.sh` script.
 5. Create the `usbgadget.service` service.
 6. Enable the `usbgadget.service` service.
-7. Restart
+7. Restart.
 
 ## Examine changes on the disk
 
