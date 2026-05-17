@@ -60,7 +60,7 @@ The disk image is `/piusb.bin`.
     ```
     /usr/local/bin/usb-gadget.sh
     ```
-5. Create the `usbgadget.service` service in:
+5. Create the [`usbgadget.service`](./root/lib/systemd/system/usbgadget.service) service in:
     ```
     /lib/systemd/system/usbgadget.service
     ```
