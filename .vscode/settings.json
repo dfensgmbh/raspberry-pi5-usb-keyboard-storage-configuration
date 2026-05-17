@@ -1,17 +1,31 @@
 {
     "cSpell.words": [
+        "ALTGR",
         "altgraph",
         "appnope",
         "asttokens",
+        "cdrom",
         "dacite",
+        "hidg",
         "ipykernel",
+        "libcomposite",
+        "mkdosfs",
+        "mountpoint",
         "mypy",
+        "nofua",
         "pathspec",
+        "piusb",
         "platformdirs",
         "pycparser",
         "pyinstaller",
         "pylint",
         "pytokens",
-        "sdist"
+        "rootwait",
+        "sdist",
+        "serialnumber",
+        "setuptools",
+        "typer",
+        "udevadm",
+        "usbgadget"
     ]
 }

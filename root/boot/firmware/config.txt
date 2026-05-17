@@ -1,0 +1,6 @@
+[cm5]
+# Change DWC2 to peripheral (device/gadget) mode.
+dtoverlay=dwc2,dr_mode=peripheral
+
+[all]
+usb_max_current_enable=1
