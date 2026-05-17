@@ -1,0 +1,11 @@
+[Unit]
+Description=USB Gadget (HID + Mass Storage)
+After=systemd-modules-load.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/usb-gadget.sh
+
+[Install]
+WantedBy=sysinit.target
