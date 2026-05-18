@@ -1,0 +1,2 @@
+# Add this to the existing fstab
+tmpfs   /mnt/ramdisk   tmpfs   defaults,size=96M   0   0

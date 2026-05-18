@@ -1,0 +1,12 @@
+[Unit]
+Description=Copy USB backing file to RAM drive.
+After=local-fs.target
+Before=usb-gadget.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/cp /piusb.bin /mnt/ramdisk/piusb.bin
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

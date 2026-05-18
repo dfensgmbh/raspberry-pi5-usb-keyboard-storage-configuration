@@ -1,6 +1,8 @@
 [Unit]
 Description=USB Gadget (HID + Mass Storage)
 After=systemd-modules-load.service
+After=ramdisk-setup.service  
+Requires=ramdisk-setup.service
 
 [Service]
 Type=oneshot
